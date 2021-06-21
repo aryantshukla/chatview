@@ -13,7 +13,7 @@ body {
   /* box-shadow: 5px 5px 2px gray; */
   border-radius: 5px;
   display: grid;
-  grid-template-rows: 40px 1fr 30px;
+  grid-template-rows: 40px 1fr;
 }
 
 .header {
@@ -34,7 +34,9 @@ body {
 .item:last-of-type {
   float: right;
 }
-
+.item {
+  z-index: -1;
+}
 /* failed */
 .profilepic {
   border: 2px black solid;
@@ -54,6 +56,7 @@ body {
   /* justify-content: flex-end; */
   overflow-y: scroll;
   height: 100%;
+  position: relative;
 }
 
 .msg {
@@ -98,6 +101,8 @@ body {
 
 .rcvmsg,
 .sendmsg {
+  z-index: -1;
+
   border-radius: 10px;
   display: inline-block;
   max-width: 50%;
@@ -148,4 +153,16 @@ body {
 
 .continous .msg:last-of-type .inmsg {
   opacity: 100;
+}
+
+.continous:last-of-type {
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #fff;
+  position: sticky;
+  bottom: 1%;
+  padding-bottom: 1%;
+  box-sizing: border-box;
 }
