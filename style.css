@@ -47,21 +47,17 @@ body {
   width: 90%;
 }
 
-.keyboard:active {
-  box-shadow: 0px 0px 1px 1px green;
-}
-
 .content {
   margin-top: 2%;
   display: flex;
-  flex-flow: column;
-  justify-content: flex-end;
-  overflow: auto;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .msg {
   width: 100%;
-  display: flow-root;
 }
 
 .senttype {
